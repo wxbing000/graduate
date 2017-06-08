@@ -1,0 +1,658 @@
+@charset "utf-8";
+/* CSS Document */
+#wrap {
+    width: 80%;
+    margin: 0 auto;
+    background-image: url(../images/singleback.jpg);
+    background-repeat: repeat
+}
+
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:link, a:visited {
+    color: #000;
+}
+
+ul li {
+    list-style: none;
+}
+
+#top {
+    width: 99%;
+    float: left;
+    height: 200px;
+}
+
+#top img {
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+}
+
+.notice {
+    width: 99%;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #A60000;
+}
+
+/*导航条开始*/
+.nav_demo {
+    width: 100%;
+    height: 51px;
+    margin: 10px auto;
+    font-family: 'SimHei';
+    float: left;
+    margin-left: -38px;
+}
+
+.nav_demo ul {
+    width: 100%;
+    float: left;
+    margin: 0;
+    height: 51px;
+    color: #000
+}
+
+.nav_demo ul a li {
+    width: 16.5%;
+    float: left;
+    text-align: center;
+    background-image: url(../images/nav_12.jpg);
+    height: 51px;
+    line-height: 51px;
+    border-right: solid 1px #fff
+}
+
+.nav_demo ul a li:hover {
+    color: #666;
+    background-image: url(../images/nav_06.jpg);
+}
+
+.nav_demo ul a li font {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*导航条结束*/
+.mainbody {
+    width: 99.4%;
+    float: left;
+    margin: 5px 0;
+    background-color: #C7DEFF;
+    margin-left: 2px;
+}
+
+/*图片轮播开始*/
+.slideshow {
+    width: 100%;
+    float: left;
+}
+
+.index {
+    position: relative;
+    right: 15px;
+    bottom: 10px;
+}
+
+.index {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+    margin-left: 15px;
+}
+
+.rslides {
+    margin: 0 auto 20px;
+}
+
+.events {
+    list-style: none;
+}
+
+.callbacks_container {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.callbacks {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.callbacks li {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.callbacks img {
+    display: block;
+    position: relative;
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    border: 0;
+    height: 480px;
+}
+
+.callbacks .caption {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    font-size: 20px;
+    text-shadow: none;
+    color: #fff;
+    background: #000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 20px;
+    margin: 0;
+    max-width: none;
+}
+
+.callbacks_nav {
+    position: absolute;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    top: 52%;
+    left: 0;
+    opacity: 0.7;
+    z-index: 3;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    height: 61px;
+    width: 38px;
+    background: transparent url("themes.gif") no-repeat left top;
+    margin-top: -45px;
+}
+
+.callbacks_nav:active {
+    opacity: 1.0;
+}
+
+.callbacks_nav.next {
+    left: auto;
+    background-position: right top;
+    right: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .callbacks_nav {
+        top: 47%;
+    }
+}
+
+/*图片轮播结束*/
+/*展馆概况及时间*/
+.demo {
+    width: 100%;
+    float: left;
+    margin-top: 12px;
+    background-image: url(../images/background.jpg);
+    background-repeat: repeat;
+}
+
+/*展馆时间开始*/
+.intro {
+    width: 32%;
+    float: left;
+    height: 320px;
+    line-height: 26px;
+}
+
+.intro_title {
+    width: 90%;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 23px;
+    line-height: 20px;
+}
+
+.intro_info {
+    width: 96%;
+    float: left;
+    padding-left: 15px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.intro_info_text {
+    width: 95%;
+    float: left;
+}
+
+.text_title {
+    width: 95%;
+    float: left;
+    font-weight: bold;
+}
+
+.text_text {
+    width: 95%;
+    float: left;
+}
+
+.text_tel {
+    width: 95%;
+    float: left;
+}
+
+.text_tel font {
+    line-height: 26px;
+}
+
+/*展馆时间结束*/
+/*展馆概况开始*/
+.info {
+    width: 68%;
+    float: left;
+}
+
+.info_title {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    line-height: 20px;
+}
+
+.info_demo {
+    width: 100%;
+    float: left;
+    margin: 15px auto 0 20px
+}
+
+.info_img {
+    width: 320px;
+    height: 250px;
+    float: left;
+}
+
+.info_img img {
+    width: 300px;
+    height: 230px;
+}
+
+.info_text {
+    width: 50%;
+    float: left;
+    padding: 15px;
+}
+
+/*展馆概况结束*/
+/*相关链接开始*/
+.link_demo {
+    width: 100%;
+    float: left;
+    height: 60px;
+    border: #EAEAEA solid 2px;
+}
+
+.select {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.select select {
+    width: 16%;
+    float: left;
+    margin: auto 5%;
+}
+
+/*相关链接结束*/
+/*footer开始*/
+.footer {
+    width: 98.5%;
+    float: left;
+    margin-top: 10px;
+    height: 52px;
+    padding: 20px;
+    background-color: #EAEAEA;
+}
+
+.footer font {
+    width: 100%;
+    float: left;
+    text-align: center;
+    line-height: 26px;
+}
+
+.footer font a {
+    text-align: center;
+    float: left;
+    line-height: 26px;
+    width: 80px;
+    height: 30px;
+}
+
+/*footer结束*/
+/*预约界面开始*/
+.yuyue_div {
+    width: 300px;
+    height: 290px;
+    position: fixed;
+    right: 8px;
+    bottom: 15px;
+}
+
+.yuyue_div_close {
+    width: 70px;
+    height: 40px;
+    position: relative;
+    left: 225px;
+    top: 25px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    z-index: 1000;
+    padding: 5px 10px;
+    background-color: #FAFAFA;
+}
+
+.yuyue {
+    width: 300px;
+    height: 260px;
+    position: fixed;
+    right: 8px;
+    bottom: 15px;
+    background-image: url(../images/back_00.jpg);
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    border-radius: 35px;
+    z-index: 900;
+}
+
+.yuyue_back {
+    width: 300px;
+    height: 260px;
+    position: fixed;
+    right: 8px;
+    bottom: 15px;
+    border-radius: 35px;
+    z-index: 901;
+}
+
+.yuyue_back input {
+    width: 100px;
+    margin-top: 6px;
+    height: 20px;
+    z-index: 910;
+}
+
+.yuyue_back select {
+    margin-top: 6px;
+    z-index: 910;
+}
+
+.yuyue_demo {
+    width: 220px;
+    margin: 50px auto auto;
+    z-index: 999;
+}
+
+.yuyue_demo_div {
+    width: 100%;
+    float: left;
+}
+
+.yuyue_demo font {
+    float: left;
+    z-index: 999
+}
+
+#showFont {
+    display: none;
+}
+
+/*预约界面结束*/
+/*新闻界面开始*/
+.bt {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    float: left;
+}
+
+.bt1 {
+    float: left;
+    width: 200px;
+    height: 50px;
+    margin-left: 50px;
+    font-family: '黑体';
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bt2 {
+    width: 200px;
+    height: 20px;
+    float: right;
+    margin-top: 15px;
+}
+
+/* .ar_m1{
+	width:60px;
+	height:20px;
+	background:#999;
+	float:left;
+} */
+.ar_m1 a {
+    display: block;
+    text-decoration: none;
+    font-size: 8px;
+    color: #333;
+    margin-top: 3px;
+    margin-left: 8px;
+    color: #FFF;
+}
+
+.ar_m1:hover {
+    background: #3cf;
+}
+
+.ar_r1 {
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-left-color: #999;
+    float: left;
+}
+
+#ar_m1:hover + #ar_r1 {
+    border-left-color: #3cf;
+}
+
+.ar_l {
+    width: 0px;
+    height: 0px;
+    border: 10px #3CF solid;
+    border-left: 10px solid transparent;
+    float: left;
+}
+
+.ar_m2 {
+    width: 85px;
+    height: 20px;
+    background: #3cF;
+    float: left;
+}
+
+.ar_r2 {
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-left-color: #3CF;
+    float: left;
+}
+
+.ljr {
+    float: left;
+    position: relative;
+    left: -15px;
+}
+
+.font1 {
+    font-size: 17px;
+    margin-left: 5px;
+    color: #FFF;
+}
+
+.newsarea {
+    width: 100%;
+    height: 160px;
+    border-bottom: 1px #ccc dashed;
+    margin-top: 10px;
+    float: left;
+}
+
+.forum_area {
+    width: 100%;
+    float: left;
+    height: 130px;
+    border-bottom: 1px #ccc dashed;
+}
+
+.newsimg {
+    width: 25%;
+    height: 150px;
+    float: left;
+    margin-left: 30px;
+}
+
+.newsmain {
+    width: 72%;
+    height: 150px;
+    float: left;
+}
+
+.forum_img {
+    width: 15%;
+    height: 110px;
+    float: left;
+    margin-top: 10px;
+}
+
+.forum_main {
+    width: 84%;
+    float: left;
+    height: 110px;
+    overflow: hidden;
+}
+
+.newstitle {
+    width: 98%;
+    height: 30px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.newstitlefont {
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.newstitlefont:hover {
+    text-decoration: underline;
+    color: #3CF;
+}
+
+.newsdetail {
+    width: 98%;
+    height: 100px;
+    color: #999;
+    margin-left: 20px;
+    line-height: 20px;
+    float: left;
+}
+
+.detail {
+    text-decoration: none;
+    color: #000;
+}
+
+.detail:hover {
+    text-decoration: underline;
+    color: #3CF;
+}
+
+.pages {
+    width: 100%;
+    height: 20px;
+    background-image: url(images/B.jpg);
+    margin-top: 20px;
+    padding: 10px;
+    float: left;
+    text-align: center;
+}
+
+.pageschange {
+    width: 200px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.pageschange a {
+    text-decoration: none;
+    color: #000;
+}
+
+.pageschange a:hover {
+    text-decoration: underline;
+}
+
+/*新闻界面结束*/
+/*展馆介绍开始*/
+.pav_time {
+    width: 100%;
+    float: left;
+    text-align: center;
+    line-height: 20px;
+    height: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+.pav_text {
+    width: 92%;
+    float: left;
+    margin-left: 4%;
+    text-indent: 2em;
+    line-height: 30px;
+}
+
+.pav img {
+    width: 92%;
+    float: left;
+    margin-left: 4%;
+    height: 581px;
+}
+
+/*展馆介绍结束*/

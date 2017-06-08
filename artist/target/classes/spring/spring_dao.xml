@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+	<!-- 数据库管理类 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/jpw" />
+		<property name="user" value="root" />
+		<property name="password" value="123" />
+	</bean>
+
+	<!-- 创建sqlSessionFactory Bean类 -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+
+		<!-- 添加数据源配置 -->
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+
+		<!-- 添加hibernate配置文件 -->
+		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
+
+		<!-- 定义hibernate sessionfactory 的属性 -->
+		<property name="hibernateProperties">
+			<props>
+				<!-- 指定hibernate的连接方言 -->
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLInnoDBDialect
+				</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<!-- 配置HibernateDAOImpl.java类文件 -->
+	<bean id="hibernateDAO" class="com.artpri.artist.dao.impl.HibernateDaoImpl"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- 艺术家个人简介dao 配置BaseInfoManageDaoImpl.java文件 -->
+	<bean id="baseInfoManageDao" class="com.artpri.artist.dao.impl.BaseInfoManageDaoImpl"
+		abstract="false" lazy-init="default" autowire="default" parent="hibernateDAO" />
+
+	<!-- 艺术家获奖信息dao -->
+	<bean id="winingExperienceDao" class="com.artpri.artist.dao.impl.WiningExperienceDaoImpl"
+		abstract="false" lazy-init="default" autowire="default" parent="hibernateDAO" />
+
+
+	<!-- 艺术家年表信息dao -->
+	<bean id="chronologyManageDao" class="com.artpri.artist.dao.impl.ChronologyManageDaoImpl"
+		abstract="false" lazy-init="default" autowire="default" parent="hibernateDAO" />
+
+
+	<!-- 艺术家相册分类信息dao -->
+	<bean id="albumCategoryMangeDao" class="com.artpri.artist.dao.impl.AlbumCategoryMangeDaoImpl"
+		abstract="false" lazy-init="default" autowire="default" parent="hibernateDAO" />
+
+	<!-- 艺术家相册图片管理dao -->
+	<bean id="albumPhotoMangeDao" class="com.artpri.artist.dao.impl.AlbumPhotoMangeDaoImpl"
+		abstract="false" lazy-init="default" autowire="default" parent="hibernateDAO" />
+
+
+	<!-- 艺术家著作管理dao -->
+	<bean id="publicBookMangeDao" class="com.artpri.artist.dao.impl.PublicBookMangeDaoImpl"
+		abstract="false" lazy-init="default" autowire="default" parent="hibernateDAO" />
+
+
+	<!-- 登录信息配置LoginDaoImpl.java文件 -->
+	<bean id="loginDao" class="com.artpri.artist.dao.impl.LoginDaoImpl"
+		abstract="false" lazy-init="default" autowire="default" parent="hibernateDAO" />
+
+	<!-- 资讯信息配置newsDaoImpl.java文件 -->
+	<bean id="newsDao" class="com.artpri.artist.dao.impl.NewsDaoImpl"
+		abstract="false" lazy-init="default" autowire="default" parent="hibernateDAO" />
+		
+	<!-- 拍卖信息 -->
+	<bean id="auctionDao" class="com.artpri.artist.dao.impl.AuctionDaoImpl"
+		abstract="false" lazy-init="default" autowire="default" parent="hibernateDAO" />
+
+    <!--展览信息-->
+    <bean id="exhibitionMangeDao" class="com.artpri.artist.dao.impl.ExhibitionMangeDaoImpl"
+          abstract="false" lazy-init="default" autowire="default" parent="hibernateDAO" />
+
+</beans>

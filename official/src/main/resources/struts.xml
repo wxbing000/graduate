@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <!--下述语句是将struts2交给spring管理 -->
+    <constant name="struts.objectFactory" value="spring"/>
+
+    <!-- 当struts配置文件发生改变时系统是否重新加载该文件 -->
+    <constant name="struts.configuration.xml.reload" value="true"/>
+
+    <!-- 开发模式下使用,这样可以打印出更详细的错误信息 -->
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+
+    <package name="default" extends="json-default" namespace="/">
+
+        <!-- 首页跳转对应的action -->
+        <action name="index" class="homePageAction" method="homePageInfo">
+            <result>WEB-INF/index.jsp</result>
+        </action>
+
+        <!-- 艺术家介绍跳转对应的action -->
+        <action name="introduce" class="IntroducePageAction" method="introductInfo">
+            <result>WEB-INF/introduce.jsp</result>
+        </action>
+
+        <!-- 艺术家作品介绍跳转对应的action -->
+        <action name="works" class="WorksPageAction" method="worksInfo">
+            <result>WEB-INF/works.jsp</result>
+        </action>
+
+        <action name="photo" class="AlbumPageAction" method="album">
+            <result>/WEB-INF/album.jsp</result>
+        </action>
+        <action name="photoByYear" class="AlbumPageAction" method="photoByYear">
+            <result>/WEB-INF/album.jsp</result>
+        </action>
+        <action name="photoByCategory" class="AlbumPageAction" method="photoByCategory">
+            <result>/WEB-INF/album.jsp</result>
+        </action>
+
+        <!-- 艺术家展览页面的action -->
+        <action name="exhibition" class="ExhibitionPageAction" method="exhibition">
+            <result>WEB-INF/exhibition.jsp</result>
+        </action>
+        <!-- 展览的详细信息 -->
+        <action name="exhibitioninfo" class="ExhibitionPageAction" method="exhibitioninfo">
+            <result>WEB-INF/exhibitionSecond.jsp</result>
+        </action>
+
+        <!-- 拍卖行情页面的action -->
+        <action name="auction" class="AuctionPageAction" method="auction">
+            <result>WEB-INF/market.jsp</result>
+        </action>
+
+        <!-- 著作页面的action -->
+        <action name="book" class="BookPageAction" method="allBook">
+            <result>WEB-INF/book.jsp</result>
+        </action>
+        <!-- 单条book的详细信息 -->
+        <action name="bookinfo" class="BookPageAction" method="bookInfo">
+            <result>WEB-INF/bookSeconed.jsp</result>
+        </action>
+
+        <!-- 留言板页面读出留言的action -->
+        <action name="leave" class="LeavePageAction" method="getLeave">
+            <result>WEB-INF/massageboard.jsp</result>
+        </action>
+        <!-- 留言板页面提交留言的action -->
+        <action name="fabiaoleave" class="LeavePageAction" method="fabiaoLeave">
+            <result type="chain">leave</result>
+        </action>
+        <!-- 咨询页面的action -->
+        <action name="news" class="NewsPageAction" method="getNews">
+            <result>WEB-INF/news.jsp</result>
+        </action>
+        <!-- 单条资讯的详细信息 -->
+        <action name="newsinfo" class="NewsPageAction" method="getNewsInfo">
+            <result>WEB-INF/newDetial.jsp</result>
+        </action>
+
+
+    </package>
+
+</struts>    

@@ -1,0 +1,417 @@
+.head {
+    width: 1000px;
+    height: 180px;
+    /*background:url(../IMG/1.jpg);*/
+    margin: 0 auto;
+    background-size: cover;
+}
+
+.ti {
+    width: 230px;
+    height: 40px;
+    background-color: #FFF;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    opacity: 0.7;
+    position: relative;
+    top: 60px;
+    left: 30px;
+    padding: 15px;
+}
+
+.nava {
+    width: 100%;
+    height: 55px;
+    background-color: #000;
+    margin-top: 10px
+}
+
+.navb {
+    width: 100%;
+    height: 50px;
+    /*background:url(../IMG/B.jpg);*/
+}
+
+.introduce_nav2 {
+    width: 92%;
+    height: 36px;
+    float: left;
+    left: 0px;
+    border-top: 5px #000 solid;
+    margin-top: 80px;
+    /*background: url(../img/bg.png);*/
+}
+
+.introduce_nav2 ul {
+    list-style: none;
+    margin: 0 auto;
+}
+
+.introduce_nav2 ul li {
+    float: left;
+    width: 100px;
+    text-align: center;
+}
+
+.introduce_nav2 ul li a:hover {
+    color: #A30000;
+}
+
+.nav2 {
+    width: 100%;
+    height: 36px;
+    float: left;
+    position: relative;
+    top: 2160px;
+    left: 0px;
+    border-top: 5px #000 solid;
+    /*background:url(IMG/B.jpg);*/
+}
+
+.nav2 ul {
+    list-style: none;
+    margin: 10px 220px;
+}
+
+.nav2 ul li {
+    float: left;
+    width: 100px;
+}
+
+.nav2 ul li a {
+    height: 10px;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    font-weight: 900;
+    font-size: 5px;
+}
+
+.nav2 ul li a:hover {
+    color: #A30000;
+}
+
+#nav {
+    width: 100%;
+    height: 50px;
+}
+
+#nav ul {
+    list-style: none;
+    width: 1040px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+#nav ul li {
+    float: left;
+}
+
+#nav ul li a {
+    height: 10px;
+    padding: 20px 25px 20px 24px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    font-weight: 900;
+}
+
+.one {
+    background-color: #000;
+}
+
+#nav ul li a:hover {
+    background: #000;
+    color: #FFF;
+}
+
+.dh {
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-bottom: #000 3px solid;
+}
+
+.bt2 {
+    width: 250px;
+    height: 20px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+.ar_m1 {
+    width: 100px;
+    height: 20px;
+    background: #CCC;
+    float: left;
+}
+
+.ar_m1 a {
+    display: block;
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 16px;
+    color: #000;
+}
+
+.ar_m1:hover {
+    background: #000;
+}
+
+.ar_m1:hover a {
+    color: #FFF;
+}
+
+.ar_r1 {
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-left-color: #CCC;
+    float: left;
+}
+
+#ar_m1:hover + #ar_r1 {
+    border-left-color: #000;
+}
+
+.ar_l {
+    width: 0px;
+    height: 0px;
+    border: 10px #000 solid;
+    border-left: 10px solid transparent;
+    float: left;
+}
+
+.ar_m2 {
+    width: 85px;
+    height: 20px;
+    background: #000;
+    float: left;
+}
+
+.font1 {
+    display: block;
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 3px;
+    margin-left: 6px;
+    color: #FFF;
+}
+
+.ar_r2 {
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-left-color: #000;
+    float: left;
+}
+
+.ljr {
+    float: left;
+    position: relative;
+    left: -15px;
+}
+
+.main {
+    width: 1000px;
+    /*height:1600px;*/
+    float: left;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+}
+
+.dha {
+    width: 200px;
+    height: 40px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    text-align: left;
+    line-height: 40px;
+    font-weight: 900;
+    color: #000;
+}
+
+.dha_ac {
+    background: #060;
+    width: 200px;
+    height: 40px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    text-align: left;
+    line-height: 40px;
+    font-weight: 900;
+    color: #FFF;
+}
+
+.dhfont {
+    margin-left: 15px;
+}
+
+.dha:hover {
+    background: #060;
+    color: #FFF;
+}
+
+.imgarr {
+    width: 20px;
+    height: 30px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    display: none;
+}
+
+.dha:hover .imgarr {
+    display: block;
+}
+
+.main_r {
+    width: 790px;
+    height: auto;
+    margin-top: 5px;
+    float: right;
+    min-height: 530px;
+}
+
+.main_r2 {
+    width: 790px;
+    height: auto;
+    margin-top: 5px;
+    float: right;
+    min-height: 200px;
+}
+
+.main_r3 {
+    width: 790px;
+    height: auto;
+    margin-top: 5px;
+    float: right;
+    min-height: 100px;
+}
+
+.tabs1 {
+    width: 790px;
+    height: 30px;
+    border-bottom: #060 1px solid;
+    margin-top: 10px;
+}
+
+.tab1button {
+    width: 70px;
+    height: 30px;
+    float: left;
+    text-align: center;
+    display: block;
+    color: #000;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.tab1button:hover {
+    background: #060;
+    color: #FFF
+}
+
+.tab1button_active {
+    width: 70px;
+    height: 30px;
+    float: left;
+    text-align: center;
+    display: block;
+    color: #FFF;
+    line-height: 30px;
+    background: #060;
+    cursor: pointer;
+
+}
+
+.tabmain {
+    width: 790px;
+    height: auto;
+}
+
+.tab1main1 {
+    width: 790px;
+    height: auto;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.tab1main2 {
+    width: 790px;
+    height: auto;
+    margin-top: 10px;
+    position: absolute;
+}
+
+.title_class {
+    width: 790px;
+    height: 40px;
+}
+
+.title_font {
+    font-size: 20px;
+    font-weight: 900;
+    margin: 15px;
+    line-height: 40px;
+}
+
+.table1 td {
+    border: #060 1px solid;
+}
+
+.table1 tr:nth-child(even) {
+    height: auto;
+    background: #DFFFDF;
+}
+
+.table1 tr:nth-child(odd) {
+    height: auto;
+}
+
+.td_l {
+    text-align: center;
+    font-weight: 900;
+    font-size: 10px;
+}
+
+.td_r {
+    width: 650px;
+    font-size: 10px;
+    line-height: 25px;
+}
+
+#hidebutton1 {
+    float: right;
+    margin-right: 20px;
+    display: block;
+}
+
+#hidebutton1:hover {
+    background: #060;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.table2 {
+    font-size: 15px;
+}
+
+.totop {
+    width: 50px;
+    height: 50px;
+    float: right;
+    background-size: cover;
+    position: relative;
+    top: 500px;
+}

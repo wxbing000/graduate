@@ -1,0 +1,28 @@
+.content{
+	border: 3px solid #bbbbbb;
+	width: 100%;
+	height: 210px;
+	margin: 20px 0 60px 0;
+	padding: 20px;
+}
+
+.content img{
+	width: 152px;
+	height: 210px;
+	margin: 0 10px;
+	float: left;
+}
+.content .intro{
+	float: left;
+	font-size: 14px;
+	line-height: 25px;
+}
+.content .intro p{
+	text-indent: 3em;
+}
+.content .intro .p1{
+	text-indent: 2em;
+}
+.content .intro .p2{
+	text-indent: 0;
+}

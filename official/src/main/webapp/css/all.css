@@ -1,0 +1,93 @@
+*{margin: 0; padding: 0}
+
+/*对于页面中所有的链接*/
+
+
+/*对于页面中的ul和li标签*/
+/*
+ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+ul li{
+	float: left;
+	text-align: center;
+	font-weight: bold;
+}
+*/
+
+/*页面中的容器*/
+.container{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+
+/*bottom_nav*/
+.bottom_nav{
+	border-top: 3px #000 solid;
+	background: url(../img/bg3.png) repeat;
+	height: 40px;
+	width: 100%;
+	font-size: 14px;
+	color: #000;
+}
+.bottom_nav ul li{
+	margin: 10px 5px;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+
+.kuang{
+	height: 50px;
+	width: 100%;
+}
+
+
+/*面包屑导航*/
+.road_nav{
+	font-size: 14px;
+	margin-top: 20px;
+	float: left;
+}
+.road_nav a{
+	background-color: #dfdfdf;
+	color: #000;
+	padding: 3px 5px;
+}
+.road_nav a:hover{
+	background-color: green;
+	color: #fff;
+}
+.road_nav a span.road_nav_1{
+	padding: 0 5px 0 8px;
+}
+.road_nav a span.road_nav_2{
+	background: url(../img/crumb.gif) no-repeat 0 -46px;
+	width: 10px;
+	height: 20px;
+}
+.road_nav a span.road_nav_3{
+	background: url(../img/crumb.gif) no-repeat 0 0;
+	width: 10px;
+	height: 20px;
+}
+.road_nav a span.road_nav_3{
+	width: 10px;
+	height: 20px;
+	background: url(../img/crumb.gif) no-repeat 0 0;
+}
+.road_nav a.active{
+	background-color: #000;
+	color: #fff;
+}
+
+.road_nav .road_nav_2{
+	display: inline-block;
+	float: left;
+	padding: 0;
+	font-size: 12px;
+	height: 20px;
+}

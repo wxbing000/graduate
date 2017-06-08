@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <!-- 分割线 -->
+    <bean id="baseAction" class="com.artpri.artist.action.BaseAction">
+        <property name="baseInfoManageService">
+            <ref bean="baseInfoManageService"/>
+        </property>
+        <property name="loginService">
+            <ref bean="loginService"/>
+        </property>
+        <property name="winingExperienceService">
+            <ref bean="winingExperienceService"/>
+        </property>
+        <property name="chronologyManageService">
+            <ref bean="chronologyManageService"/>
+        </property>
+        <property name="albumCategoryMangeService">
+            <ref bean="albumCategoryMangeService"/>
+        </property>
+        <property name="albumPhotoMangeService">
+            <ref bean="albumPhotoMangeService"/>
+        </property>
+        <property name="publicBookMangeService">
+            <ref bean="publicBookMangeService"/>
+        </property>
+        <property name="newsService">
+            <ref bean="newsService"/>
+        </property>
+        <property name="auctionService">
+            <ref bean="auctionService"/>
+        </property>
+        <property name="exhibitionMangeService">
+            <ref bean="exhibitionMangeService"/>
+        </property>
+    </bean>
+
+    <!-- 登录模块配置 -->
+
+    <!-- 配置 LoginAction.java文件 -->
+    <bean id="LoginAction" class="com.artpri.artist.action.LoginAction"
+          parent="baseAction"/>
+
+
+    <!-- 艺术家基本信息模块配置 -->
+
+
+    <!-- 向数据库中插入提交的简介 InsertBriefIntroductAction.java配置 -->
+    <bean id="InsertBriefIntroductAction" class="com.artpri.artist.action.InsertBriefIntroductAction"
+          parent="baseAction"/>
+
+    <!-- 查询数据库中艺术家的简介 IsSubmitBriefIntroduct.java -->
+    <bean id="IsSubmitBriefIntroduct" class="com.artpri.artist.action.IsSubmitBriefIntroduct"
+          parent="baseAction"/>
+
+    <!-- 查询艺术家的获奖经历GetWinningExperienceAction.java -->
+    <bean id="GetWinningExperienceAction" class="com.artpri.artist.action.GetWinningExperienceAction"
+          parent="baseAction">
+        <!-- 每个页面显示多少条数据配置项 -->
+        <property name="pageSize" value="8"></property>
+    </bean>
+
+    <!-- 配置 WinningExprienceMangeAction.java文件 -->
+    <bean id="WinningExprienceMangeAction" class="com.artpri.artist.action.WinningExprienceMangeAction"
+          parent="baseAction"/>
+
+
+    <!-- 查询艺术家年表信息 -->
+    <bean id="GetChronologyAction" class="com.artpri.artist.action.GetChronologyAction"
+          parent="baseAction">
+        <!-- 每个页面显示多少条数据配置项 -->
+        <property name="pageSize" value="5"></property>
+    </bean>
+
+    <!-- 艺术家个人年表信息删除或修改 配置 ChronologyManagementAction.java文件 -->
+    <bean id="ChronologyManagementAction" class="com.artpri.artist.action.ChronologyManagementAction"
+          parent="baseAction"/>
+
+
+    <!-- 艺术家相册管理模块配置 -->
+
+    <!-- 艺术家增删改相册分类配置 -->
+    <bean id="AlbumCategoryMangeAction" class="com.artpri.artist.action.AlbumCategoryMangeAction"
+          parent="baseAction"/>
+
+    <!-- 艺术家查询相册分类配置 -->
+    <bean id="GetAlbumCategoryAction" class="com.artpri.artist.action.GetAlbumCategoryAction"
+          parent="baseAction"/>
+
+    <!-- 艺术家相册图片上传管理配置 -->
+    <bean id="AlbumPhotoMangeAction" class="com.artpri.artist.action.AlbumPhotoMangeAction"
+          parent="baseAction"/>
+
+    <!-- 艺术家相册图片上传管理配置 -->
+    <bean id="ModifyAlbumPhotoAction" class="com.artpri.artist.action.ModifyAlbumPhotoAction"
+          parent="baseAction"/>
+
+    <!-- 艺术家相册图片有关条件查询配置 查询条件包括：时间，标题，分类 -->
+    <bean id="GetQueryAlbumPhotoAction" class="com.artpri.artist.action.GetQueryAlbumPhotoAction"
+          parent="baseAction"/>
+
+    <!-- 艺术家上传图书信息跳转action -->
+    <bean id="PublicBookMangeAction" class="com.artpri.artist.action.PublicBookMangeAction" parent="baseAction"/>
+
+    <!-- 资讯信息跳转action -->
+    <bean id="NewsAction" class="com.artpri.artist.action.NewsAction" parent="baseAction"/>
+
+    <!-- 获取艺术及著作信息action -->
+    <bean id="GetPublicBookAction" class="com.artpri.artist.action.GetPublicBookAction" parent="baseAction">
+        <!-- 每个页面显示多少条数据配置项 -->
+        <property name="pageSize" value="6"></property>
+    </bean>
+
+    <!-- 拍卖信息action -->
+    <bean id="AuctionAction" class="com.artpri.artist.action.AuctionAction" parent="baseAction" />
+
+    <!--艺术家展览管理模块-->
+
+    <bean id="ExhibitionManageAction" class="com.artpri.artist.action.ExhibitionManageAction" parent="baseAction"/>
+
+</beans>

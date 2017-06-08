@@ -1,0 +1,23 @@
+ #gotop{
+    /*background-position:-276px -310px;*/
+    bottom:20px;
+    _margin-bottom:20px;
+    width:23px;
+    height:24px;
+    position:fixed;
+    right:50px;
+    cursor:pointer;
+    _position:absolute;
+    _bottom:auto;
+    _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}
+#gotup a img{
+    width: 24px;
+    height: 23px;
+    background:url(../img/back_top.gif) no-repeat 0 0;
+}
+#gotup a:hover img{
+    width: 24px;
+    height: 23px;
+    background:url(../img/back_top.gif) no-repeat 0 -23px;
+}

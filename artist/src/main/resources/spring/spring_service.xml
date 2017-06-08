@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath*:upload_path.properties" ignore-unresolvable="true"/>
+
+    <bean id="baseService" class="com.artpri.artist.service.impl.BaseService">
+        <property name="baseInfoManageDao">
+            <ref bean="baseInfoManageDao"/>
+        </property>
+        <property name="loginDao">
+            <ref bean="loginDao"/>
+        </property>
+        <property name="winingExperienceDao">
+            <ref bean="winingExperienceDao"/>
+        </property>
+        <property name="chronologyManageDao">
+            <ref bean="chronologyManageDao"/>
+        </property>
+        <property name="albumCategoryMangeDao">
+            <ref bean="albumCategoryMangeDao"/>
+        </property>
+        <property name="albumPhotoMangeDao">
+            <ref bean="albumPhotoMangeDao"/>
+        </property>
+        <property name="publicBookMangeDao">
+            <ref bean="publicBookMangeDao"/>
+        </property>
+        <property name="newsDao">
+            <ref bean="newsDao"/>
+        </property>
+        <property name="auctionDao">
+            <ref bean="auctionDao"/>
+        </property>
+        <property name="exhibitionMangeDao">
+            <ref bean="exhibitionMangeDao"/>
+        </property>
+        <property name="imagePath" value="${uploadPicture.image}"/>
+        <property name="pictureRootPath" value="${uploadPicture.root}"/>
+        <property name="webUrl" value="${web.path}"/>
+    </bean>
+
+    <!--定义常量 start-->
+
+    <!--定义常量 end-->
+
+    <!--艺术家个人简介 配置BaseInfoManageServiceImpl.java类文件 -->
+    <bean id="baseInfoManageService" class="com.artpri.artist.service.impl.BaseInfoManageServiceImpl"
+          parent="baseService"/>
+
+    <!-- 艺术家个人获奖经历配置 -->
+    <bean id="winingExperienceService" class="com.artpri.artist.service.impl.WiningExperienceServiceImpl"
+          parent="baseService"/>
+
+    <!-- 艺术家个人年表配置 -->
+    <bean id="chronologyManageService" class="com.artpri.artist.service.impl.ChronologyManageServiceImpl"
+          parent="baseService"/>
+
+
+    <!-- 艺术家相册分类管理逻辑处理类配置 -->
+    <bean id="albumCategoryMangeService" class="com.artpri.artist.service.impl.AlbumCategoryMangeServiceImpl"
+          parent="baseService"/>
+
+    <!-- 艺术家相册图片管理逻辑处理类配置 -->
+    <bean id="albumPhotoMangeService" class="com.artpri.artist.service.impl.AlbumPhotoMangeServiceImpl"
+          parent="baseService"/>
+
+    <!-- 艺术家著作管理逻辑处理类配置 -->
+    <bean id="publicBookMangeService" class="com.artpri.artist.service.impl.PublicBookMangeServiceImpl"
+          parent="baseService"/>
+
+    <!-- 配置LoginServiceImpl.java类文件 -->
+    <bean id="loginService" class="com.artpri.artist.service.impl.LoginServiceImpl"
+          parent="baseService"/>
+
+    <!-- 配置LoginServiceImpl.java类文件 -->
+    <bean id="newsService" class="com.artpri.artist.service.impl.NewsServiceImpl"
+          parent="baseService"/>
+
+    <!-- 配置AuctionServiceImpl.java类文件 -->
+    <bean id="auctionService" class="com.artpri.artist.service.impl.AuctionServiceImpl"
+          parent="baseService"/>
+
+    <bean id="exhibitionMangeService" class="com.artpri.artist.service.impl.ExhibitionMangeServiceImpl"
+          parent="baseService"/>
+</beans>

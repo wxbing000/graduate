@@ -1,0 +1,32 @@
+body{background-image: url(../images/mountain.jpg);background-size:100% 130%;}
+body,h1,input,button{margin:0;padding:0;}
+.login{
+    width:500px;height:380px;margin:60px auto;background-color:#000;
+    filter:alpha(opacity=60);opacity:0.6;border-radius: 20px;
+}
+h1{
+    font-family:"黑体";
+    font-size:40px;
+    line-height:120px;
+    text-align:center;
+    color:#fff;
+}
+input{
+    display:block;
+    width:300px;
+    height:35px;
+    margin:0 100px 20px 100px;
+    border-radius: 7px;
+}
+button{
+    background-color:#B2BFCB;
+    display:block;
+    width:304px;
+    height:40px;
+    margin:0 96px 20px 100px;
+    border-radius: 7px;
+}
+button span{
+    font-size:30px;
+    line-height:30px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <title> 文章内容展开和收起 </title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+	<style type="text/css">
+		.news {width:600px;position:relative;top:0;left:50%;margin-left:-300px;}
+		.news .news-title {overflow:hidden;position:relative;}
+		.news #showOrHide {position:absolute; top:50%; right:10px;}
+	</style>
+	<script type="text/javascript">
+		window.onload =function(){
+			document.getElementById("showOrHide").onclick = function(){
+				var news = document.getElementById("content");
+				if(typeof(news) != "undefined" ){
+					news.style.display = (news.style.display.toLowerCase()=="none") ? "":"none";
+					this.innerHTML = (news.style.display.toLowerCase()=="none") ? "↓展开全文" : "↑收起全文";
+				}
+			};
+		}
+	</script>
+ </head>
+
+ <body>
+		<div class="news">
+			<div class="news-title">
+				<h3>文章标题</h3>
+				<a href="javascript:;" id="showOrHide">↑收起全文</a>
+			</div>
+			<div id="content">
+				内容，顶顶顶顶顶顶顶顶顶顶
+			</div>
+		</div>
+ </body>
+</html>

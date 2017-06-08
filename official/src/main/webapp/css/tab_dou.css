@@ -1,0 +1,42 @@
+/*tab切换开始*/
+.tab-notice{width:1000px;
+    margin:10px auto;
+}
+
+.tab-notice-tit{height:50px;
+    position:relative;
+    background:#c40000;
+    color: #fff;}
+
+.tab-notice-tit ul{
+    position:absolute;
+    top:5px;
+    width:97%;
+    margin-left: 3%;
+}
+
+.tab-notice-tit li{float:left;
+    height:45px;
+    line-height:45px;
+    text-align:center;
+    overflow:hidden;
+    /*background:#c40000;*/
+}
+.tab-notice-tit li a{
+    color: #fff;
+    padding:0 15px;
+    font-weight: bolder;
+}
+
+.tab-notice-tit li.tab-select{background:#FFF;
+    padding:0;
+    font-weight:bolder;}
+.tab-notice-tit li.tab-select a{color: #c40000;}
+.tab-notice li a:link,.tab-notice li a:visited{
+    text-decoration:none;}
+.tab-notice-con .tab-mod{float:left;
+    width:1000px;
+    /*height:125px;*/
+    padding:12px 20px;
+    overflow:hidden;}
+/*tab切换结束*/

@@ -1,0 +1,322 @@
+* {
+    font-family: 'Microsoft YaHei';
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+a:visited {
+    color: #000
+}
+
+li {
+    list-style: none;
+}
+
+a font {
+    color: #000;
+}
+
+#wrap_top {
+    width: 1000px;
+    height: 245px;
+    margin: 15px auto;
+    position: relative;
+}
+
+#wrap_top img {
+    width: 1000px;
+    height: 245px;
+    float: left;
+}
+
+.wrap_zuozhe_demo {
+    width: 275px;
+    height: 92px;
+    background-color: #CCC;
+    opacity: 0.6;
+    position: absolute;
+    top: 74px;
+    left: 53px;
+}
+
+.wrap_zuozhe {
+    width: 275px;
+    height: 92px;
+    position: absolute;
+    top: 74px;
+    left: 53px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.wrap_wzhi {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+.wrap_wzhi a font {
+    color: #fff;
+}
+
+/*导航条开始*/
+.nav {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    background: url(../img/B.jpg) repeat;
+    border-bottom: 4px solid #000;
+}
+
+.nav_wrap {
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.nav_wrap ul {
+    width: 100%;
+    float: left;
+}
+
+.nav_wrap ul li a {
+    width: 10%;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.nav_wrap ul li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/*导航条结束*/
+/*tab切换开始*/
+.tab-notice {
+    width: 1000px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.tab-notice-tit {
+    height: 50px;
+    position: relative;
+    background: #fff;
+}
+
+.tab-notice-tit ul {
+    height: 46px;
+    margin-top: 4px;
+    position: absolute;
+    width: 97%;
+    margin-left: 3%;
+}
+
+.tab-notice-tit li {
+    float: left;
+    width: 19.8%;
+    height: 46px;
+    line-height: 50px;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 1px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.tab-notice-tit li a {
+    color: #c40000;
+    font-weight: bolder;
+}
+
+.tab-notice-tit li.tab-select {
+    background: #c40000;
+    padding: 0;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.tab-notice-tit li.tab-select a {
+    color: #fff;
+}
+
+.tab-notice li a:link, .tab-notice li a:visited {
+    text-decoration: none;
+}
+
+.tab-notice-con .tab-mod {
+    margin: 10px 6px;
+}
+
+/*tab切换结束*/
+.dh {
+    width: 1000px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-bottom: #000 3px solid;
+}
+
+.bt2 {
+    width: 250px;
+    height: 20px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 30px;
+    line-height: 20px;
+}
+
+.ar_m1 {
+    width: 100px;
+    height: 20px;
+    background: #CCC;
+    float: left;
+}
+
+.ar_m1 a {
+    display: block;
+    text-decoration: none;
+    font-size: 13px;
+    margin-left: 16px;
+    color: #000;
+}
+
+.ar_m1:hover {
+    background: #000;
+}
+
+.ar_m1:hover a {
+    color: #FFF;
+}
+
+.ar_r1 {
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-left-color: #CCC;
+    float: left;
+}
+
+#ar_m1:hover + #ar_r1 {
+    border-left-color: #000;
+}
+
+.ar_l {
+    width: 0px;
+    height: 0px;
+    border: 10px #000 solid;
+    border-left: 10px solid transparent;
+    float: left;
+}
+
+.ar_m2 {
+    width: 85px;
+    height: 20px;
+    background: #000;
+    float: left;
+}
+
+.font1 {
+    height: 20px;
+    display: block;
+    text-decoration: none;
+    font-size: 13px;
+    margin-left: 6px;
+    color: #FFF;
+}
+
+.ar_r2 {
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-left-color: #000;
+    float: left;
+}
+
+.ljr {
+    float: left;
+    position: relative;
+    left: -15px;
+}
+
+/*页码开始*/
+.zixun_footer {
+    width: 100%;
+    float: left;
+    height: 50px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.zixun_footer_div {
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    width: 10%;
+}
+
+.zixun_footer_num {
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    width: 10%;
+}
+
+#zixun_first {
+    background-color: #A60000;
+}
+
+/*页码结束*/
+
+/*翻页*/
+.page {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin-top: 15px;
+
+    text-align: center;
+}
+
+.page span, .page a {
+    padding: 0 15px;
+    line-height: 38px;
+    display: inline-block;
+    height: 38px;
+    font-size: 14px;
+    font-family: Arial, SimSun ;
+    vertical-align: middle;
+    color: #000;
+}
+
+.page span {
+    margin-right: 0;
+}
+
+.page a:hover {
+    line-height: 32px;
+    height: 35px;
+    text-decoration: none;
+    border-top: 3px solid #0f820c;
+}
+
+.page a.cur, .page a.cur:hover {
+    height: 38px;
+    line-height: 38px;
+    border: 0;
+    background: #0f820c;
+    color: #FFF;
+}
